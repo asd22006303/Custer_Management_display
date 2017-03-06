@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>錯誤Error !!</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="../js/sweetalert-dev.js"></script>
+        <link rel="stylesheet" href="../css/sweetalert.css">
+        <link href="../css/Styles/Message Board.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+    <div id="container">
+        <img src="../Subaru_mark.png"  align="left" alt="SUBARU">
+        <div id="header">
+            <h1>Subaru 顧客管理系統</h1>
+        </div>
+        <div id="main">
+            <script>
+          <!--   swal({"Error!! 錯誤發生。", "請重輸入帳號與密碼。", "error"}, -->
+             swal({
+                 title: 'Error!! 錯誤發生。',
+                 text: '請重輸入帳號與密碼。',
+                 type: 'error'},
+             function(){
+                return_login_page();
+                //call_back_page();
+             });
+
+             //function call_back_page(){
+             //   window.history.go(-1);
+             //}
+
+             function return_login_page(){
+		     window.location="../login.html"
+	     }
+            </script>
+        <img src="../Subaru_Forester.png"  align="right" alt="SUBARU">
+        <br></div>
+        <div id="footer">
+            Customer Management System by Double Smile 2017
+        </div>
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    </div>
+    </body>
+</html>

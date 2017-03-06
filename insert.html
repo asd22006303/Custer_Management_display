@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>輸入顧客資料頁</title>
+        <style type="text/css">
+          .grid { margin: 4px; border-collapse: collapse; width: 600px; }
+          .grid th, .grid td { border: 1px solid #C0C0C0; padding: 5px; }
+          .head { background-color: #E8E8E8; font-weight: bold; color: #FFF; }
+          .alt { background-color: #E8E8E8; color: #000; }
+        </style>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/sweetalert-dev.js"></script>
+        <link rel="stylesheet" href="css/sweetalert.css">
+        <link href="css/Styles/Message Board.css" rel="stylesheet" type="text/css" />
+        <link href="css/from.css" rel="stylesheet" />
+    </head>
+    <body>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <div id="container">
+        <img src="Subaru_mark.png"  align="left" alt="SUBARU"> 
+        <div id="header">
+          <h1>Subaru 顧客管理系統</h1>
+        </div>
+        <div id="main">
+        <h1>請輸入顧客相關資料</h1>
+	<div class="form-style-2">
+	<form method="post" name="insert_value" action="insert.php">
+	<div>
+	<label for="field1"><span>顧客姓名： <span class="required">*</span></span><input type="text" class="input-field" name="name" placeholder="請輸入" /></label>
+	<label for="field1"><span>行動電話： <span class="required"></span></span><input type="text" class="input-field" name="customerphone" placeholder="請輸入" /></label>
+	<label for="field1"><span>出生年齡： <span class="required"></span></span><input type="text" class="input-field" name="age_year" placeholder="年份(ex:1963)" /></label>
+        <label for="field4"><span>月份</span>
+                <select name="age_month" class="select-field">
+                        <option value="01">一月</option>
+                        <option value="02">二月</option>
+                        <option value="03">三月</option>
+                        <option value="04">四月</option>
+			<option value="05">五月</option>
+                        <option value="06">六月</option>
+                        <option value="07">七月</option>
+                        <option value="08">八月</option>
+                        <option value="09">九月</option>
+                        <option value="10">十月</option>
+                        <option value="11">十一月</option>
+                        <option value="12">十二月</option>
+                </select></label>
+        <label for="field4"><span>日期</span>
+                <select name="age_day" class="select-field">
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                        <option value="04">04</option>
+                        <option value="05">05</option>
+                        <option value="06">06</option>
+                        <option value="07">07</option>
+                        <option value="08">08</option>
+                        <option value="09">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option>
+                </select></label>
+
+	<label for="field1"><span>使用者： <span class="required"></span></span><input type="text" class="input-field" name="searchmonth" placeholder="請輸入" /></label>
+	<label for="field1"><span>通訊地址： <span class="required"></span></span><input type="text" class="input-field" name="address" placeholder="請輸入" /></label>
+	<label for="field1"><span>戶籍地址： <span class="required"></span></span><input type="text" class="input-field" name="liveadress" placeholder="請輸入" /></label>
+	<label for="field1"><span>身分證字號： <span class="required"></span></span><input type="text" class="input-field" name="uniformnumbers" placeholder="請輸入" /></label>
+        <label for="field4"><span>領牌月份： </span>
+        	<select name="take_car" class="select-field">
+	        <option value="01">一月</option>
+	        <option value="02">二月</option>
+	        <option value="03">三月</option>
+	        <option value="04">四月</option>
+	        <option value="05">五月</option>
+	        <option value="06">六月</option>
+	        <option value="07">七月</option>
+	        <option value="08">八月</option>
+	        <option value="09">九月</option>
+	        <option value="10">十月</option>
+	        <option value="11">十一月</option>
+	        <option value="12">十二月</option>
+	</select></label>
+	<label for="field4"><span>重點追蹤客戶：</span>
+		<select name="favorite" class="select-field">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</select></label>
+	<HR>
+	<label for="field1"><span>公司行號： <span class="required"></span></span><input type="text" class="input-field" name="companyname" placeholder="請輸入" /></label>
+	<label for="field1"><span>公司電話： <span class="required"></span></span><input type="text" class="input-field" name="companyphone" placeholder="請輸入" /></label>
+	<label for="field1"><span>公司職稱： <span class="required"></span></span><input type="text" class="input-field" name="companyposition" placeholder="請輸入" /></label>
+	<label for="field1"><span>統一編號： <span class="required"></span></span><input type="text" class="input-field" name="companylinenumber" placeholder="請輸入" /></label>
+	<HR>
+	<label for="field1"><span>保有車型： <span class="required"></span></span><input type="text" class="input-field" name="cartype" placeholder="請輸入" /></label>
+	<label for="field1"><span>洽購車型： <span class="required"></span></span><input type="text" class="input-field" name="ordercartype" placeholder="請輸入" /></label>
+	<label for="field1"><span>訂單編號： <span class="required"></span></span><input type="text" class="input-field" name="orderform" placeholder="請輸入" /></label>
+	<label for="field1"><span>引擎號碼： <span class="required"></span></span><input type="text" class="input-field" name="enginenumber" placeholder="請輸入" /></label>
+	<label for="field1"><span>交車日期： <span class="required"></span></span><input type="text" class="input-field" name="deliverday" placeholder="請輸入" /></label>
+	<label for="field1"><span>牌照號碼： <span class="required"></span></span><input type="text" class="input-field" name="carlicensenumber" placeholder="請輸入" /></label>
+	<HR>
+	<label for="field1"><span>強制保險卡： <span class="required"></span></span><input type="text" class="input-field" name="forcedcard" placeholder="請輸入" /></label>
+	<label for="field1"><span>保險公司： <span class="required"></span></span><input type="text" class="input-field" name="insurancecompany" placeholder="請輸入" /></label>
+	<label for="field1"><span>保單號碼： <span class="required"></span></span><input type="text" class="input-field" name="insurancenumber" placeholder="請輸入" /></label>
+	<label for="field1"><span>貸款行庫： <span class="required"></span></span><input type="text" class="input-field" name="loancompany" placeholder="請輸入" /></label>
+	<label for="field1"><span>貸款金額： <span class="required"></span></span><input type="text" class="input-field" name="loannumber" placeholder="請輸入" /></label>
+	<label for="field5"><span>備註： <span class="required"></span></span><textarea name="remark" class="textarea-field"></textarea></label>
+	<input type="submit" value="提交" style="width:80px;height:30px;font-size:15px;"/>
+	<a href="display.php">瀏覽顧客資料總表</a>
+	</div>
+        </form>
+	</div>
+        <img src="Subaru_Forester.png"  align="right" alt="SUBARU"> 
+        </div>
+        <div id="footer">
+          Customer Management System by Double Smile 2017
+        </div>
+    </div>
+    </body>
+</html>
