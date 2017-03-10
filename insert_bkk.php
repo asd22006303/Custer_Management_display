@@ -69,157 +69,37 @@ if(!empty($AGE_DAY)) shell_exec("echo age_day, >> database/insert_key");
 if(!empty($TAKE_CAR)) shell_exec("echo take_car, >> database/insert_key");
 
 if(file_exists("database/insert_value")) shell_exec("sudo rm -rf database/insert_value");
-if(!empty($NAME)){
-        $fp = fopen('database/insert_value', 'w');
-        fwrite($fp, "'$NAME',");
-        fclose($fp);
-}
-if(!empty($CELLPHONE)){
-        $fp = fopen('database/insert_value', 'a');
-        fwrite($fp, "'$CELLPHONE',");
-        fclose($fp);
-}
-if(!empty($AGE)){
-        $fp = fopen('database/insert_value', 'a');
-        fwrite($fp, "'$AGE',");
-        fclose($fp);
-}
-if(!empty($SEARCH_MONTH)){
-        $fp = fopen('database/insert_value', 'a');
-        fwrite($fp, "'$SEARCH_MONTH',");
-        fclose($fp);
-}
-if(!empty($COMM_ADRESS)){
-        $fp = fopen('database/insert_value', 'a');
-        fwrite($fp, "'$COMM_ADRESS',");
-        fclose($fp);
+if(!empty($NAME)) shell_exec("echo \'".$NAME."\', >> database/insert_value");
+if(!empty($CELLPHONE)) shell_exec("echo \'".$CELLPHONE."\', >> database/insert_value");
+if(!empty($AGE)) shell_exec("echo \'".$AGE."\', >> database/insert_value");
+if(!empty($SEARCH_MONTH)) shell_exec("echo \'".$SEARCH_MONTH."\', >> database/insert_value");
+if(!empty($COMM_ADRESS)) shell_exec("echo \'".$COMM_ADRESS."\', >> database/insert_value");
+if(!empty($LIVE_ADRESS)) shell_exec("echo \'".$LIVE_ADRESS."\', >> database/insert_value");
+if(!empty($SOCIETY_NUMBER)) shell_exec("echo \'".$SOCIETY_NUMBER."\', >> database/insert_value");
+if(!empty($COMPANY_NAME)) shell_exec("echo \'".$COMPANY_NAME."\', >> database/insert_value");
+if(!empty($COMPANY_PHONE)) shell_exec("echo \'".$COMPANY_PHONE."\', >> database/insert_value");
+if(!empty($COMPANY_TITLE)) shell_exec("echo \'".$COMPANY_TITLE."\', >> database/insert_value");
+if(!empty($COMPANY_NUMBER)) shell_exec("echo \'".$COMPANY_NUMBER."\', >> database/insert_value");
+if(!empty($OLD_CAR)) shell_exec("echo \'".$OLD_CAR."\', >> database/insert_value");
+if(!empty($NEW_CAR)) shell_exec("echo \'".$NEW_CAR."\', >> database/insert_value");
+if(!empty($ORDERS_NUMBER)) shell_exec("echo \'".$ORDERS_NUMBER."\', >> database/insert_value");
+if(!empty($ENGINE_NUMBER)) shell_exec("echo \'".$ENGINE_NUMBER."\', >> database/insert_value");
+if(!empty($POSE_CAR_DATE)) shell_exec("echo \'".$POSE_CAR_DATE."\', >> database/insert_value");
+if(!empty($LICENSE_NUMBER)) shell_exec("echo \'".$LICENSE_NUMBER."\', >> database/insert_value");
+if(!empty($FORCE_SAFE_NUMBER)) shell_exec("echo \'".$FORCE_SAFE_NUMBER."\', >> database/insert_value");
+if(!empty($SAFE_COMPANY_NAME)) shell_exec("echo \'".$SAFE_COMPANY_NAME."\', >> database/insert_value");
+if(!empty($SAFE_LIST_NUMBER)) shell_exec("echo \'".$SAFE_LIST_NUMBER."\', >> database/insert_value");
+if(!empty($CREDIT_BANK_NAME)) shell_exec("echo \'".$CREDIT_BANK_NAME."\', >> database/insert_value");
+if(!empty($CREDIT_MONEY)) shell_exec("echo \'".$CREDIT_MONEY."\', >> database/insert_value");
+if(!empty($FAVORITE)) shell_exec("echo \'".$FAVORITE."\', >> database/insert_value");
+if(!empty($REMARKS)) shell_exec("echo \'".$REMARKS."\', >> database/insert_value");
+if(!empty($AGE_MONTH)) shell_exec("echo \'".$AGE_MONTH."\', >> database/insert_value");
+if(!empty($AGE_DAY)) shell_exec("echo \'".$AGE_DAY."\', >> database/insert_value");
+if(!empty($TAKE_CAR)) shell_exec("echo \'".$TAKE_CAR."\', >> database/insert_value");
+$INSERT="insert.sh";
+shell_exec('/bin/sh '.$INSERT." insert");
 
-}
-if(!empty($LIVE_ADRESS)){
-	$fp = fopen('database/insert_value', 'a');
-	fwrite($fp, "'$LIVE_ADRESS',");
-	fclose($fp);
-}
-if(!empty($SOCIETY_NUMBER)){
-        $fp = fopen('database/insert_value', 'a');
-        fwrite($fp, "'$SOCIETY_NUMBER',");
-        fclose($fp);
-}
-if(!empty($COMPANY_NAME)){
-        $fp = fopen('database/insert_value', 'a');
-        fwrite($fp, "'$COMPANY_NAME',");
-        fclose($fp);
-}
-if(!empty($COMPANY_PHONE)){
-        $fp = fopen('database/insert_value', 'a');
-        fwrite($fp, "'$COMPANY_PHONE',");
-        fclose($fp);
-}
-if(!empty($COMPANY_TITLE)){
-        $fp = fopen('database/insert_value', 'a');
-        fwrite($fp, "'$COMPANY_TITLE',");
-        fclose($fp);
-}
-if(!empty($COMPANY_NUMBER)){
-        $fp = fopen('database/insert_value', 'a');
-        fwrite($fp, "'$COMPANY_NUMBER',");
-        fclose($fp);
-}
-if(!empty($OLD_CAR)){
-        $fp = fopen('database/insert_value', 'a');
-        fwrite($fp, "'$OLD_CAR',");
-        fclose($fp);
-}
-if(!empty($NEW_CAR)){
-        $fp = fopen('database/insert_value', 'a');
-        fwrite($fp, "'$NEW_CAR',");
-        fclose($fp);
-}
-if(!empty($ORDERS_NUMBER)){
-        $fp = fopen('database/insert_value', 'a');
-        fwrite($fp, "'$ORDERS_NUMBER',");
-        fclose($fp);
-}
-if(!empty($ENGINE_NUMBER)){
-        $fp = fopen('database/insert_value', 'a');
-        fwrite($fp, "'$ENGINE_NUMBER',");
-        fclose($fp);
-}
-if(!empty($POSE_CAR_DATE)){
-        $fp = fopen('database/insert_value', 'a');
-        fwrite($fp, "'$POSE_CAR_DATE',");
-        fclose($fp);
-}
-if(!empty($LICENSE_NUMBER)){
-        $fp = fopen('database/insert_value', 'a');
-        fwrite($fp, "'$LICENSE_NUMBER',");
-        fclose($fp);
-}
-if(!empty($FORCE_SAFE_NUMBER)){
-        $fp = fopen('database/insert_value', 'a');
-        fwrite($fp, "'$FORCE_SAFE_NUMBER',");
-        fclose($fp);
-}
-if(!empty($SAFE_COMPANY_NAME)){
-        $fp = fopen('database/insert_value', 'a');
-        fwrite($fp, "'$SAFE_COMPANY_NAME',");
-        fclose($fp);
-}
-if(!empty($SAFE_LIST_NUMBER)){
-        $fp = fopen('database/insert_value', 'a');
-        fwrite($fp, "'$SAFE_LIST_NUMBER',");
-        fclose($fp);
-}
-if(!empty($CREDIT_BANK_NAME)){
-        $fp = fopen('database/insert_value', 'a');
-        fwrite($fp, "'$CREDIT_BANK_NAME',");
-        fclose($fp);
-}
-if(!empty($CREDIT_MONEY)){
-        $fp = fopen('database/insert_value', 'a');
-        fwrite($fp, "'$CREDIT_MONEY',");
-        fclose($fp);
-}
-if(!empty($FAVORITE)){
-        $fp = fopen('database/insert_value', 'a');
-        fwrite($fp, "'$FAVORITE',");
-        fclose($fp);
-}
-if(!empty($REMARKS)){
-        $fp = fopen('database/insert_value', 'a');
-        fwrite($fp, "'$REMARKS',");
-        fclose($fp);
-}
-if(!empty($AGE_MONTH)){
-        $fp = fopen('database/insert_value', 'a');
-        fwrite($fp, "'$AGE_MONTH',");
-        fclose($fp);
-}
-if(!empty($AGE_DAY)){
-        $fp = fopen('database/insert_value', 'a');
-        fwrite($fp, "'$AGE_DAY',");
-        fclose($fp);
-}
-if(!empty($TAKE_CAR)){
-        $fp = fopen('database/insert_value', 'a');
-        fwrite($fp, "'$TAKE_CAR',");
-        fclose($fp);
-}
-
-	$INSERT="insert.sh";
-	shell_exec('/bin/sh '.$INSERT." insert");
-	header("Location:display_page/insert_right.html");
-
-/* Not finish	
-$return=trim(shell_exec("echo $status"));
-
-if ($return == "error"){
-	header("Location:display_page/insert_error.html");
-}else{
-	header("Location:display_page/insert_right.html");
-}
-*/
-
+header("Location:display_page/insert_right.html");
 /*shell_exec('/bin/sh '.$AUTO_DELETE." insert ".$NAME.' '.$CELLPHONE.' '.$AGE.' '.$SEARCH_MONTH.' '.$COMM_ADRESS.' '.$LIVE_ADRESS.' '.$SOCIETY_NUMBER.' '.$COMPANY_NAME.' '.$COMPANY_PHONE.' '.$COMPANY_TITLE.' '.$COMPANY_NUMBER.' '.$OLD_CAR.' '.$NEW_CAR.' '.$ORDERS_NUMBER.' '.$ENGINE_NUMBER.' '.$POSE_CAR_DATE.' '.$LICENSE_NUMBER.' '.$FORCE_SAFE_NUMBER.' '.$SAFE_COMPANY_NAME.' '.$SAFE_LIST_NUMBER.' '.$CREDIT_BANK_NAME.' '.$CREDIT_MONEY.' '.$REMARKS);
 */
 

@@ -8,7 +8,14 @@ insert(){
     cat database/insert_key | tr "\n" " " | sed 's/.$//' | sed 's/.$//' > database/insert_key_output
     INSERT_KEY=`cat database/insert_key_output`
 
-    cat database/insert_value | tr "\n" " " | sed 's/.$//' | sed 's/.$//' > database/insert_value_output
+    cat database/insert_value | sed 's/.$//' > database/insert_value_output
+
+    # Not finish
+    #cat insert_value | grep -r '\\'
+    #[ $? == '0'] && echo "5"
+    #status="error"
+    #echo $status
+
     INSERT_VALUE=`cat database/insert_value_output`
 
 mysql --user=louis --password=louis0626  --database=Subaru_DB << EOF
