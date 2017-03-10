@@ -219,36 +219,4 @@ if ($return == "error"){
 	header("Location:display_page/insert_right.html");
 }
 */
-
-/*shell_exec('/bin/sh '.$AUTO_DELETE." insert ".$NAME.' '.$CELLPHONE.' '.$AGE.' '.$SEARCH_MONTH.' '.$COMM_ADRESS.' '.$LIVE_ADRESS.' '.$SOCIETY_NUMBER.' '.$COMPANY_NAME.' '.$COMPANY_PHONE.' '.$COMPANY_TITLE.' '.$COMPANY_NUMBER.' '.$OLD_CAR.' '.$NEW_CAR.' '.$ORDERS_NUMBER.' '.$ENGINE_NUMBER.' '.$POSE_CAR_DATE.' '.$LICENSE_NUMBER.' '.$FORCE_SAFE_NUMBER.' '.$SAFE_COMPANY_NAME.' '.$SAFE_LIST_NUMBER.' '.$CREDIT_BANK_NAME.' '.$CREDIT_MONEY.' '.$REMARKS);
-*/
-
-/* Execute default value success.
-sqlite insert.db "INSERT INTO insert_Config (name,age,search_month,comm_adress,live_adress,society_number,company_name,company_phone,company_title,company_number,old_car,new_car,orders_number,engine_number,pose_car_date,license_number,force_safe_number,safe_company_name,safe_list_number,credit_bank_name,credit_money,remarks) VALUES ('aaa','','','','','','','','','','','''','','','','','','','','','','')"
-*/
-
-
-/*
-$login_name=trim(`sqlite ./database/login.db "select value from login_Config where config='name'"`);
-$login_password=trim(`sqlite ./database/login.db "select value from login_Config where config='password'"`);
-
-if ($login_name==$_POST['login_name'] && $login_password==$_POST['login_password']){
-    header("Location: ./aaa.html");
-    exit; 
-}else{
-//    alert("帳號：".$_POST['login_name']."\n密碼：".$_POST['login_password']);
-    echo "帳號：".$_POST['login_name']."\n密碼：".$_POST['login_password'];
-}
-
-//shell_exec("/bin/sh "./dropbox.sh $_POST['login_name'] $_POST['login_password']");   
-//$fp = fopen('/tmp/output.txt', 'w');
-//echo fprintf($fp,"Welcome to %s.",$_POST['login_password']);
-//fclose($fp);
-
-//echo "輸入為:". $login_name; 
-
-//  header("Location: ./bbb.html"); 
-//exit;
-  
-*/
 ?>

@@ -1,19 +1,4 @@
 <?php 
-/*
-$db_server = "localhost";
-$db_user = "louis";
-$db_passwd = "louis0626";
-$db_name = "Subaru_DB";
-
-$con = mysqli_connect("localhost",$db_user,$db_passwd);
-
-mysqli_query($con, "SET NAMES 'UTF8'");
-mysqli_select_db($con,$db_name);
-$sql ="DELETE FROM customer_info WHERE id=".$_POST['remove_id'];
-$result = mysqli_query($con,$sql);//執行sql語法
-header("Location:../display.php?Remove=".$_POST['remove_id']);
- */
-
 if (isset($_GET['execute'])){
 		execute_delete();
 	}else{
@@ -72,13 +57,9 @@ function execute_delete(){
 				window.location = 'remove_DB.php?execute=true';
 			}else{
 				window.location.href = '../display.php';
-				//call_back_page();
 			}
 		}
 	);
-        //function call_back_page(){
-        //        window.history.go(-1);
-        //}
         </script>
         <img src="../Subaru_Forester.png"  align="right" alt="SUBARU">
         <br></div>
