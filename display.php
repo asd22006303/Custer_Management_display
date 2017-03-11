@@ -224,9 +224,44 @@ function show_info($row){
 		</div>
 	<img src="Subaru_Forester.png"  align="right" alt="SUBARU">
      </div>
-<!-- 製作網頁瞬間跳上功能 -->
+<!-- 製作網頁瞬間跳上功能 
 	<a style="display:scroll;position:fixed;bottom:0px;right:5px;" href="#" title="" onFocus="if(this.blur)this.blur()">
 	<img alt='' border='0' onmouseover="this.src='http://4.bp.blogspot.com/-AKP9Gl_ets0/TmzrRBJPg_I/AAAAAAAADpY/M3KVvsDNJbA/s1600/Top.png'" src="http://1.bp.blogspot.com/-_gUa3K1wDNo/TmzrHROhBVI/AAAAAAAADpU/vOKm_7zL8DQ/s1600/Top_medium.png" onmouseout="this.src='http://1.bp.blogspot.com/-_gUa3K1wDNo/TmzrHROhBVI/AAAAAAAADpU/vOKm_7zL8DQ/s1600/Top_medium.png'" /></a>
+-->
+<!-- 製作網頁瞬間跳上功能二 -->
+<style>
+#gotop {
+display: none;
+position: fixed;
+right: 20px;
+bottom: 20px;    
+padding: 10px 15px;    
+font-size: 20px;
+background: #777;
+color: white;
+cursor: pointer;
+}
+</style>
+
+<script type="text/javascript">
+$(function(){
+    $("#gotop").click(function(){
+        jQuery("html,body").animate({
+            scrollTop:0
+        },1000);
+    });
+    $(window).scroll(function() {
+        if ( $(this).scrollTop() > 300){
+            $('#gotop').fadeIn("fast");
+        } else {
+            $('#gotop').stop().fadeOut("fast");
+        }
+    });
+});
+</script>
+
+<div id="gotop">˄</div>
+
 
 <script>
 // 切割Remove DB 回傳的URL值
