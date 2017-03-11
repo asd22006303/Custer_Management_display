@@ -19,7 +19,7 @@ if (!$con)
 mysqli_query($con, "SET NAMES 'UTF8'");
 mysqli_select_db($con,$db_name);
 
-$sql = "SELECT * from customer_info";
+$sql = "SELECT * from customer_info ORDER BY id DESC";
 $result = mysqli_query($con,$sql);
 
 function show_info($row){
