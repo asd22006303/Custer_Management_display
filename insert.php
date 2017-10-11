@@ -1,6 +1,6 @@
 <?php
 session_start();
-if ($_SESSION['login'] != 'success'){
+if ($_SESSION['login'] != 'successful'){
         header("Location: ./display_page/login_error.html");
 	exit;
 }

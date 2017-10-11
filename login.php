@@ -4,7 +4,7 @@ $login_password=trim(`sqlite ./database/login.db "select value from login_Config
 
 if ($login_name==$_POST['login_name'] && $login_password==$_POST['login_password']){
 	session_start();
-	$_SESSION['login'] = success;
+	$_SESSION['login'] = successful;
 	header("Location: ./display.php");
 	exit; 
 }else{
