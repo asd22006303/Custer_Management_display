@@ -8,7 +8,7 @@ if ($_SESSION['login'] != 'success'){
 $db_server = "localhost";
 $db_user = "louis";
 $db_passwd = "louis0626";
-$db_name = "Subaru_DB";
+$db_name = "Subaru_DB_display";
 
 $use_key = $_POST['use_name'];
 

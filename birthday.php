@@ -8,7 +8,7 @@ if ($_SESSION['login'] != 'success'){
 $db_server = "localhost";
 $db_user = "louis";
 $db_passwd = "louis0626";
-$db_name = "Subaru_DB";
+$db_name = "Subaru_DB_display";
 
 $NOW_MONTH = trim(shell_exec("date '+%B'"));
 if($NOW_MONTH=='January') $NOW_MONTH='01';

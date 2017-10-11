@@ -18,7 +18,7 @@ insert(){
 
     INSERT_VALUE=`cat database/insert_value_output`
 
-mysql --user=louis --password=louis0626  --database=Subaru_DB << EOF
+mysql --user=louis --password=louis0626  --database=Subaru_DB_display << EOF
 SET NAMES 'utf8';
 INSERT INTO customer_info (${INSERT_KEY}) VALUES (${INSERT_VALUE});
 EOF

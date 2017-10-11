@@ -6,6 +6,6 @@ CREATE TABLE "login_Config" (
     "config" varchar(50) NOT NULL UNIQUE,
     "value" varchar(60) NOT NULL
 );
-INSERT INTO "login_Config" VALUES(1,'login','name','520721');
-INSERT INTO "login_Config" VALUES(2,'login','password','0916336291');
+INSERT INTO "login_Config" VALUES(1,'login','name','user');
+INSERT INTO "login_Config" VALUES(2,'login','password','admin');
 COMMIT;
